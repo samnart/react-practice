@@ -1,27 +1,52 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import './index.css'
+
 const BookList = () => {
-    return <section>
-        <Book/>
-        <Book/>
-        <Book/>
-        <Book/>
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
     </section>
+  )
 }
 
 const Book = () => {
-    return <article>
-        <Image/>
-        <Title/>
-        <Author/>
+  const title = 'The Women'
+  const author = 'Kristin Hannah'
+  return (
+    <article className="book">
+      <img src="./images/book-1.jpg" alt="The Women" />
+      <h2>{title}</h2>
+      <h4>{author}</h4>
     </article>
+  )
 }
-
-const Image = () => <img src='https://images-na.ssl-images-amazon.com/images/I/913C+MR3S5L._AC_UL900_SR900,600_.jpg' alt='The Women'/>
-const Title = () => <h2>The Women</h2>
-const Author = () => <h4>Kristin Hannah</h4>
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(<BookList />)
+
+
+
+
+
+
+
+
+
+```css
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: boorder-box;
+    }
+
+    body {
+        font-family: 
+        background: #f1f5f8;
+        color: #222;
+    }
+
+```
